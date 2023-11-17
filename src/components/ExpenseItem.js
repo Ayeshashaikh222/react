@@ -1,4 +1,6 @@
 import './ExpenseItem.css';
+import ExpenseDate from './ExpenseDate';
+import ExpenseDetails from './ExpenseDetails';
 
 function ExpenseItem(props) {
     // const LocationOfExpenditure = 'DMart';
@@ -7,20 +9,13 @@ function ExpenseItem(props) {
     // const expenseAmount = 297.69;
 
 
+
+
     return (
         <div className="expense-item">
-            <div>{props.locationOfExpenditure}</div>
-            <div>{props.date.toISOString()}</div>
-            <div className="expense-item__description">
-                { /* <h2>Expense item!</h2>, */}
-                <h2>{props.title}</h2>
-            </div>
-            <div className="expense-item__price">{props.amount}
-                {/* <h2>Food Rs 10</h2>,
-        <h2>Petrol Rs 100</h2>,
-        <h2>Movies Rs 200</h2>  */}
 
-            </div>
+            <ExpenseDate date={props.date} />
+            <ExpenseDetails title={props.title} amount={props.amount} locationOfExpenditure={props.locationOfExpenditure} />
         </div>
 
     )
