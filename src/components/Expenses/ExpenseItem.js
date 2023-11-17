@@ -9,8 +9,6 @@ function ExpenseItem(props) {
     // const expenseAmount = 297.69;
 
 
-
-
     return (
         <div className="expense-item">
 
