@@ -1,19 +1,25 @@
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 import ExpenseDetails from './ExpenseDetails';
+// import Card from '../UI/card';
 
 function ExpenseItem(props) {
-    // const LocationOfExpenditure = 'DMart';
-    // const expenseDate = new Date(2021, 2, 28);
-    // const expenseTitle = 'car Insurance';
-    // const expenseAmount = 297.69;
+    const clickHandler = () => {
+        console.log('clicked!!!!');
+    };
+
+    const deleteHandler = () => {
+        console.log('expense item deleted');
+    }
 
 
     return (
         <div className="expense-item">
 
-            <ExpenseDate date={props.date} />
+            <ExpenseDate date={props.date}/>
             <ExpenseDetails title={props.title} amount={props.amount} locationOfExpenditure={props.locationOfExpenditure} />
+            <button onClick={clickHandler}>Change Title</button>
+            <button onClick={deleteHandler}>Delete Expense</button>
         </div>
 
     )
