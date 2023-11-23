@@ -10,18 +10,7 @@ function ExpenseItem(props) {
     const [title, setTitle] = useState(props.title);
     const [amount, setAmount] = useState(props.amount);
     
-    const clickHandler = () => {
-        setTitle('Updated!');
-        console.log(title);
-    };
-
-    const changeAmountHandler = () => {
-        setAmount('$100');
-    }
-
-    const deleteHandler = () => {
-        console.log('expense item deleted');
-    }
+    
 
 
     return (
@@ -29,9 +18,7 @@ function ExpenseItem(props) {
 
             <ExpenseDate date={props.date}/>
             <ExpenseDetails title={title} amount={amount} locationOfExpenditure={props.locationOfExpenditure} />
-            <button onClick={clickHandler}>Change Title</button>
-            <button onClick={changeAmountHandler}>Change Amount</button>
-            <button onClick={deleteHandler}>Delete Expense</button>
+            
         </div>
 
     )
