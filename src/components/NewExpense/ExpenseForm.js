@@ -6,6 +6,7 @@ function ExpenseForm(props) {
     const [enteredTitle, SetEnteredTitle] = useState("");
     const [enteredAmount, setEnteredAmount] = useState("");
     const [enteredDate, setEnteredDate] = useState("");
+    
 
 
     const titleChangeHandler = (event) => {
@@ -40,11 +41,12 @@ function ExpenseForm(props) {
         setEnteredAmount('');
         setEnteredDate('');
 
-    }
+    };
 
 
     return (
-        <form onSubmit={submitHandler}>
+       
+         <form onSubmit={submitHandler}>
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label className='new-expense__control'>Title:</label>
@@ -60,9 +62,11 @@ function ExpenseForm(props) {
                 </div>
             </div>
             <div className='new-expense__actions'>
+                <button type='button'onClick={props.onCancel}>Cancel</button>
                 <button type="submit">Add Expenses</button>
             </div>
-        </form>
+        </form> 
+    
     )
 }
 
