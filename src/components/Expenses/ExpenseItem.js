@@ -14,12 +14,14 @@ function ExpenseItem(props) {
 
 
     return (
+        <li>
         <div className="expense-item">
 
             <ExpenseDate date={props.date}/>
             <ExpenseDetails title={title} amount={amount} locationOfExpenditure={props.locationOfExpenditure} />
             
         </div>
+        </li>
 
     )
 
