@@ -30,6 +30,23 @@ const ExpensesList = (props) => {
     {content}
     </div>
     
-   )}
+   )} else {
+    return (
+      <ul className="expenses-list">
+        {props.items.map((expense) => (
+            
+            <ExpenseItem
+              key={expense.id}
+              title={expense.title}
+              amount={expense.amount}
+              date={expense.date}
+              locationOfExpenditure={expense.locationOfExpenditure}
+      
+            />
+          ))
+          }
+    </ul>
+    )
+   }
 }
 export default  ExpensesList;
